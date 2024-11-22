@@ -17,7 +17,5 @@ mongoose
 const noteRoutes = require("./routes/noteRoutes");
 app.use("/api/notes", noteRoutes);
 
-const port = process.env.PORT || 5000;
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+// Export the handler for Vercel to use
+module.exports = app;
